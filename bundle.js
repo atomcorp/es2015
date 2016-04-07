@@ -44,10 +44,13 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
 	// file paths relative to this file
 	__webpack_require__(1);
+	__webpack_require__(5);
 	__webpack_require__(6);
-	document.write(__webpack_require__(5));
+	document.write(__webpack_require__(7));
 
 /***/ },
 /* 1 */
@@ -401,14 +404,25 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = "Reloaded. It works from content.js.";
-
+	"use strict";
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
-	
+	"use strict";
+
+	var name = "tom";
+
+	var sentence = "My name is " + name;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	module.exports = "Reloaded. It works from content.js. LIVE!";
 
 /***/ }
 /******/ ]);
