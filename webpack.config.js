@@ -4,13 +4,15 @@ module.exports = {
 		path: __dirname,
 		filename: "bundle.js"
 	},
+	devtool: "source-map",
 	module: {
 		loaders: [
-			{	test: /\.css$/, 
-				loader: "style!css"
+			{			
+				test: /\.scss$/,
+				loaders: ["style", "css?sourceMap", "sass?sourceMap"]
 			},
 			{
-				test: /\.jsx?$/,
+				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				loader: 'babel', // 'babel-loader' is also a legal name to reference
 				query: {
